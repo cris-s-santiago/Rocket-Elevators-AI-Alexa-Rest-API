@@ -19,7 +19,12 @@ namespace RestAPI.Controllers
         {
             _context = context;
         }
-
+    //-----------get all the elevators-----------------//
+      [HttpGet]
+        public async Task<ActionResult<IEnumerable<Elevator>>> GetElevator()
+        {
+            return await _context.elevators.ToListAsync();
+        }
 //------------------- Retrieving a list of Elevators that are not in operation at the time of the request -------------------\\
 
         // GET: api/Elevators/NotActive

@@ -24,7 +24,7 @@ namespace RestAPI.Controllers
     //get all nodeName
 
     [HttpGet]
-        public async Task<ActionResult<IEnumerable<Blockchain>>> Getcustomers()
+        public async Task<ActionResult<IEnumerable<Blockchain>>> GetBlockchains()
         {
             return await _context.blockchains.ToListAsync();
         }

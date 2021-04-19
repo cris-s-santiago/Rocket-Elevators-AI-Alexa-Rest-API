@@ -19,7 +19,12 @@ namespace RestAPI.Controllers
         {
             _context = context;
         }        
-
+//---------get all buildings//
+      [HttpGet]
+        public async Task<ActionResult<IEnumerable<Building>>> GetBuildings()
+        {
+            return await _context.buildings.ToListAsync();
+        }
 //----------------------------------- Retrieving all information from a specific Building -----------------------------------\\
 
         // GET: api/Buildings/id

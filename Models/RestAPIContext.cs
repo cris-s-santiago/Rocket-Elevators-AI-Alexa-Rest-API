@@ -15,6 +15,9 @@ namespace RestAPI.Models
 
                 modelBuilder.Entity<Blockchain>() 
                 .HasKey(x => x.id);
+
+                modelBuilder.Entity<Quote>() 
+                .HasKey(x => x.id);
                
                 modelBuilder.Entity<Building>()
                 .HasKey(b => b.id);
@@ -78,6 +81,7 @@ namespace RestAPI.Models
         public DbSet<Customer> customers { get; set; }
         public DbSet<Intervention> interventions { get; set; }
         public DbSet<Address> addresses { get; set; }
+        public DbSet<Quote> quotes { get; set; }
 
     }
 }
