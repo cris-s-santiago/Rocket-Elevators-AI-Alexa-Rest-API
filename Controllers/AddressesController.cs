@@ -42,6 +42,14 @@ namespace RestAPI.Controllers
             return address;
         }
 
+//----------------------------------- Retrieving all building addresses -----------------------------------\\
+        // GET: api/Addresses/City
+        [HttpGet("City")]
+        public object GetCitys()
+        {
+            return _context.addresses.Where(addresses => addresses.entity == "Building"); 
+        }
+
 //----------------------------------- Update information from a specific Address -----------------------------------\\
 
         // PUT: api/Addresses
