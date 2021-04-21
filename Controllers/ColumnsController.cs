@@ -20,7 +20,14 @@ namespace RestAPI.Controllers
             _context = context;
         }
 
+//----------------------------------------------- Retrieving all Columns -------------------------------------------------\\
 
+    //GET: api/Columns
+    [HttpGet]
+        public async Task<ActionResult<IEnumerable<Column>>> GetColumn()
+        {
+            return await _context.columns.ToListAsync();
+        }
 
 //----------------------------------- Retrieving all information from a specific Column -----------------------------------\\
         
