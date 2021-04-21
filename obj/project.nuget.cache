@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J22m/6W0fgcSDZmQKbNbX8kHWhvBzE0O5QyWqw1OjgxEGcOXyY8Ve8qQczz7eyRnzVVYbpE661/40N1PgiMhUQ==",
+  "dgSpecHash": "BKb5ZpXZyXabgF+MnC8RjRtidtE9yVW6Tnw/y63Gbv+uSnka9hAAqeqkwSKFlBJsmP/mAC5jJ1dIOAxH8DVVkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\izere\\RocketElevators-AI-Alexa-Rest-API\\RestAPI.csproj",
+  "projectFilePath": "c:\\Users\\izere\\RocketElevators-AI-Alexa-Rest-API\\RestAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\izere\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\izere\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

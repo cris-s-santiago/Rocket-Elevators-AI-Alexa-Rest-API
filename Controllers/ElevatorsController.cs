@@ -56,7 +56,7 @@ namespace RestAPI.Controllers
 //----------------------------------- Retrieving the current status of a specific Elevator -----------------------------------\\
 
         // GET: api/Elevators/id/Status
-        [HttpGet("{id}/Status")]
+        [HttpGet("Status/{id}")]
         public async Task<ActionResult<string>> GetColumnStatus([FromRoute] long id)
         {
             var elevator = await _context.elevators.FindAsync(id);
