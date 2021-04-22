@@ -57,7 +57,7 @@ namespace RestAPI.Controllers
 
         // GET: api/Elevators/id/Status
         [HttpGet("{id}/Status")]
-        public async Task<ActionResult<string>> GetColumnStatus([FromRoute] long id)
+        public async Task<ActionResult<string>> GetElevatorStatus([FromRoute] long id)
         {
             var elevator = await _context.elevators.FindAsync(id);
 
@@ -80,7 +80,7 @@ namespace RestAPI.Controllers
                 return BadRequest();
             }
             
-            if (elevator.status == "Active" || elevator.status == "Inactive" || elevator.status == "Intervention")
+            if (elevator.status == "active" || elevator.status == "inactive" || elevator.status == "intervention")
             {
                 Elevator elevatorFound = await _context.elevators.FindAsync(id);
                 elevatorFound.status = elevator.status;

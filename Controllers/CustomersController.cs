@@ -27,10 +27,26 @@ namespace RestAPI.Controllers
             return await _context.customers.ToListAsync();
         }
 
+//----------------------------------- Retrieving all information from a specific Customer -----------------------------------\
+
+        //GET: api/Customers/id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Customer>> GetCustomer(long id)
+        {
+            var customer = await _context.customers.FindAsync(id);
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return customer;
+        }
+
 //------------------------------ Retrieving just Info of Customer using the e-mail -------------------------------\\
 
-        //GET: api/Customers/email
-        [HttpGet("{email}")]
+        //GET: api/Customers/Info/email
+        [HttpGet("Info/{email}")]
         public object GetEmailCustomer(string email)
         {
             var customer = _context.customers.Where(e=>e.email_of_company_contact == email);

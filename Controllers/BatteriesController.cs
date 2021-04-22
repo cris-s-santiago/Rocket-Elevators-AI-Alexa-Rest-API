@@ -70,7 +70,7 @@ namespace RestAPI.Controllers
                 return BadRequest();
             }
             
-            if (battery.status == "Active" || battery.status == "Inactive" || battery.status == "Intervention")
+            if (battery.status == "active" || battery.status == "inactive" || battery.status == "intervention")
             {
                 Battery batteryFound = await _context.batteries.FindAsync(id);
                 batteryFound.status = battery.status;

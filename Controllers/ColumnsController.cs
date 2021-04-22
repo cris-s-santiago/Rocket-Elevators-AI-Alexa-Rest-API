@@ -73,7 +73,7 @@ namespace RestAPI.Controllers
                 return BadRequest();
             }
             
-            if (column.status == "Active" || column.status == "Inactive" || column.status == "Intervention")
+            if (column.status == "active" || column.status == "inactive" || column.status == "intervention")
             {
                 Column columnFound = await _context.columns.FindAsync(id);
                 columnFound.status = column.status;

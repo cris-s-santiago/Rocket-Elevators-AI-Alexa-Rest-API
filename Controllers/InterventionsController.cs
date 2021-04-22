@@ -20,13 +20,45 @@ namespace RestAPI.Controllers
             _context = context;
         }
 
-//----------------------------------- Retrieving all information from a specific Battery -----------------------------------\\
+//----------------------------------- Retrieving a list with all Interventions -----------------------------------\\
 
         // GET: api/Interventions
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Intervention>>> Getinterventions()
         {
             return await _context.interventions.ToListAsync();
+        }
+
+//----------------------------------- Retrieving all information from a specific Intervention -----------------------------------\\
+
+        //GET: api/Interventions/id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Intervention>> GetIntervention(long id)
+        {
+            var intervention = await _context.interventions.FindAsync(id);
+
+            if (intervention == null)
+            {
+                return NotFound();
+            }
+
+            return intervention;
+        }
+
+//----------------------------------- Retrieving status from a specific Intervention -----------------------------------\\
+
+        // GET: api/Interventions/id/Status
+        [HttpGet("{id}/Status")]
+        public async Task<ActionResult<string>> GetInterventionStatus([FromRoute] long id)
+        {
+            var intervention = await _context.interventions.FindAsync(id);
+
+            if (intervention == null)
+            {
+                return NotFound();
+            }
+
+            return intervention.status;
         }
 
 
@@ -77,7 +109,7 @@ namespace RestAPI.Controllers
             return NoContent();
         }
 
-
+        
 //----------- Change the status of the request for action to "Completed" and add an end date and time (Timestamp) -------------\\
 
         // PUT: api/Interventions/id/Completed
