@@ -15,7 +15,6 @@ using System;
         public int? num_of_distinct_businesses { get; set; }
         public string building_type { get; set; }
         public string product_line { get; set; }
-       
         public string sub_total { get; set; }
         public int? required_columns { get; set; }
         public int? num_of_activity_hours_per_day { get; set; }
@@ -24,8 +23,4 @@ using System;
         
         public string company_name { get; set; }
         public string email { get; set; }
-             
-
-           
     }
-
