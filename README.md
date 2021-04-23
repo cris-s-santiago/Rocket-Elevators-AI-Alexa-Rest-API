@@ -1,71 +1,43 @@
 ![](images/week11photo01.jpg)
 
-# Rocket Elevators Customer Portal <img src="images/R2.png" align="right" alt="Rocket Elevators logo" width="" height="100">
+# Rocket Elevators AI Alexa Rest API <img src="images/R2.png" align="right" alt="Rocket Elevators logo" width="" height="100">
 -----------------------------------------------------------------------------------------------
 
-## CodeBoxx Odissey - Week 11 - .NET Core
-
-
------------------------------------------------------------------------------------------------
-### Project by:
-Cristiane Santiago
-
-[URL for Rest API:  https://rocket-elevators.azurewebsites.net](https://rocket-elevators.azurewebsites.net)
-
-[URL for Customer Portal:  https://rocketelevatorsrestapi2.azurewebsites.net/](https://rocketelevatorsrestapi2.azurewebsites.net)
-
-[Click here to see the presentation video](	https://www.youtube.com/watch?v=npTVRcXBt2s)
-
+## CodeBoxx Odissey - CodeBoxx Odissey - Week 13 - Artificial Intelligence as a Service
 
 -----------------------------------------------------------------------------------------------
 
-# [(This is the repository for the item 3, mentioned in this Readme file. To access the repository, for the Rocket Elevators Customer Portal, that has the items 1, 2, 4 and 5 mention in this Readme, please click in this link)](https://github.com/danigrum/Rocket_Elevators_Customer_Portal_)
+# Team:
 
+```ssh
+- Eric Turcotte
+- Claude St-Laurent
+- Cristiane Santiago
+- Felix Masse
+- Ines Josiane
+- Tommy Côté
+```
 -----------------------------------------------------------------------------------------------
 
-This week deliverables:
+🚀 This repo serves as the Rocket Elevators REST API developed for CodeBoxx's week 13 of the Odyssey program. We were tasked with developing a REST API to interact with the MYSQL database that already exists, and provide the appropriate requests for queries.
 
-## 1) Create a new portal, specially for Rocket Elevators's customers;
+The REST API URL is: https://rocket-elevators-ai.azurewebsites.net
 
-    login: kathline.weissnat@howe.io  /  password: 123456
+New endpoints added:
 
-### Sign Up and Sign In page
-![](images/week11photo02.jpg)
+📌 GET: api/Batteries/ - Retrieving a list of all Battery.
 
+📌  GET: api/Buildings - Retrieving a list of all Buildings.
 
-### Home page, once signed in
-![](images/week11photo03.jpg)
+📌 GET: api/Columns - Retrieving a list of all Columns.
 
-## 2) Create a new SQL database, specially for this portal, that should contain only the login and password informations about the client;
-   
-![](images/week11MicrosoftAqllogo.png)
+📌 GET: api/Elevators - Retrieving a list of all Elevators.
 
-## 3 new Rest API end points:
+📌 GET: api/Interventions/id/Status - Retrieving status from a specific Intervention.
 
-## 3.A) GET: to verify if the email from login page already exists in the MySQL database. If it exists, so the client will have access to this portal;
+📌 GET: api/Quote - Retrieving a list of all Quotes.
 
-## 3.B) GET: to retrieve informations from the client that are in the main Rocket Elevators's database (MySQL), like his/her buildings, batteries, columns, elevators;
-
-![](images/week11photo08.jpg)
-
-## 3.C) PULL: for all customer's informations
-
-![](images/week11photo09.jpg)
-
-## 4) A page for Intervention, in this new portal, where the client will be able to create his/her own interventions;
-
-![](images/week11photo04.jpg)
-
-## 5) A page for the client's products, in this new portal, where the client will be able to consult the informations about his/her products and also it will be possible to create an interventions from this page, that will lead the selected and sent informations, to the page Intervention and then it will be possible to create a description and submit the form; 
-
-![](images/week11photo05.jpg)
-
-![](images/week11photo06.jpg)
-
-## 6) A page for the customer's profile informations, in this new portal, where the user can update any information;
-
-![](images/week11photo07.jpg)
-
+📌 GET: api/Addresses/City - Retrieving all addresses of entity building.
 
 ![](images/week11photo10.jpg)
 
